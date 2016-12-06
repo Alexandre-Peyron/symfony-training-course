@@ -4,10 +4,10 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Symfony Presentation</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/league.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -24,8 +24,200 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+
+                <section>
+                    <section>
+                        <h1>Symfony</h1>
+                        <h3>High Performance PHP Framework for Web Development</h3>
+                        <p>
+                            <small><a href="https://www.alexandre-peyron.fr">Alexandre Peyron</a> / Freelance FullStack Developer</small>
+                        </p>
+                    </section>
+                </section>
+
+				<section>
+
+                    <section data-background="/img/dywtn.gif">
+                        <h2>Symfony</h2>
+                        <h3>Qu'est-ce que c'est ?</h3>
+                    </section>
+
+                    <section>
+
+                        <h5>Un framework fullStack</h5>
+                        <h5>Autrement dit, une expérience complète pour le développement d'un projet web</h5>
+
+                        <ul>
+                            <li class="fragment">Routing/Controller</li>
+                            <li class="fragment">Formulaire (génération/validation)</li>
+                            <li class="fragment">ORM / <a href="http://www.doctrine-project.org/">Doctrine</a></li>
+                            <li class="fragment">Gestion des assets</li>
+                            <li class="fragment">Templating</li>
+                            <li class="fragment">Envoi d'email / <a href="http://swiftmailer.org/">Swift Mailer</a></li>
+                            <li class="fragment">Multi-langue</li>
+                            <li class="fragment">Console</li>
+                            <li class="fragment">Debug</li>
+                            <li class="fragment">Sécurité</li>
+                            <li class="fragment">...</li>
+                        </ul>
+
+                    </section>
+
+                </section>
+
+                <section>
+
+                    <section>
+                        <h1>Maintenant on code !</h1>
+                        <img src="/img/a88.jpg">
+                    </section>
+
+                    <section>
+                        <h2>Installer un projet</h2>
+                        <p>Il faut aller sur <a href="https://symfony.com/download">https://symfony.com/download</a></p>
+                        <p>ou</p>
+                        <p><a href="https://github.com/Alexandre-Peyron/symfony-licence-presentation">https://github.com/Alexandre-Peyron/symfony-licence-presentation</a> </p>
+                    </section>
+
+                    <section>
+                        <h2>Structure d'un projet</h2>
+                        <ul>
+                            <li>app/ - Fichiers de configurations et templates</li>
+                            <li>bin/ - Fichiers binaires et executables</li>
+                            <li>src/ - Votre code, vos bundles !</li>
+                            <li>tests/</li>
+                            <li>var/ - Contient le cache, les logs ainsi que les sessions</li>
+                            <li>vendor/ - Contient toutes les librairies PHP</li>
+                            <li>web/ - Dossier racine de la vhost, point d'entrée de l'application</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Utilisation de la console</h2>
+
+                        <br>
+                        <p>Ouvrir un terminal/invite de commande et entrer</p>
+                        <br>
+                        <pre><code class="hljs" data-trim contenteditable>
+                        php bin/console
+					    </code></pre>
+
+                    </section>
+
+                    <section>
+                        <h2>Création d'un vhost</h2>
+
+                        <pre><code class="hljs" data-trim contenteditable>
+                        php bin/console server:run
+					    </code></pre>
+
+                    </section>
+
+                    <section>
+                        <h2>Création d'un bundle</h2>
+
+                        <pre><code class="hljs" data-trim contenteditable>
+                        php bin/console generate:bundle
+					    </code></pre>
+                    </section>
+
+                    <section>
+                        <h2>Création d'une Entity</h2>
+
+                        <pre><code class="hljs" data-trim contenteditable>
+                        php bin/console doctrine:generate:entity
+					    </code></pre>
+                    </section>
+
+                    <section>
+                        <h2>Mise à jour de la base de données</h2>
+
+                        <pre><code class="hljs" data-trim contenteditable>
+                        php bin/console doctrine:schema:update --dump-sql
+					    </code></pre>
+
+
+                        <pre><code class="hljs" data-trim contenteditable>
+                        php bin/console doctrine:schema:update --force
+					    </code></pre>
+                    </section>
+
+                    <section>
+                        <h2>Génération du CRUD</h2>
+
+                        <pre><code class="hljs" data-trim contenteditable>
+                        php bin/console doctrine:generate:crud
+					    </code></pre>
+
+                        <img src="/img/mind_blown.gif">
+
+                    </section>
+
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Symfony</h2>
+                        <h3>Pourquoi l'utiliser ?</h3>
+
+                        <img src="/img/hum.jpg">
+
+                    </section>
+
+                    <section>
+                        <h3>Gain de temps !</h3>
+                        <p>On se concentre sur le projet et pas sur le développement d'outils génériques</p>
+                        <p>Exemple: génération des actions basiques, système d'authentification</p>
+                    </section>
+
+                    <section>
+                        <h3>La maintenabilité</h3>
+                        <p>Merci à Sensio Lab pour les LTS</p>
+                    </section>
+
+                    <section>
+                        <h3>La communauté et l'open source</h3>
+                        <p>Lors de la phase d'apprentissage (et même après), la documentation répondra à 90% de vos questions. Pour le reste, StackOverflow sera là !</p>
+                    </section>
+
+                    <section>
+                        <h3>Pour trouver du boulot !</h3>
+                        <p>Les experts Symfony sont très demandés et très durs à trouver.</p>
+                    </section>
+
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Symfony</h2>
+                        <h3>Pourquoi ne pas l'utiliser ?</h3>
+                    </section>
+
+                    <section>
+                        <h3>La courbe d'apprentissage</h3>
+                        <p>Un peu long à prendre en main pour un débutant.</p>
+                    </section>
+
+                    <section>
+                        <h3>Utile que pour du développement spécifique.</h3>
+                        <p>Pour faire un site vitrine, l'intérêt est limité.</p>
+                    </section>
+
+                    <section>
+                        <h3>Obligation d'améliorer son workflow.</h3>
+                        <p>Le déploiement par FTP, c'est terminé !</p>
+                    </section>
+
+                </section>
+
+                <section>
+                    <h3>Pour aller plus loin</h3>
+
+                    <p><a href="https://symfony.com/doc/current/index.html">La documentation de Symfony</a> </p>
+                    <p><a href="https://openclassrooms.com/courses/developpez-votre-site-web-avec-le-framework-symfony">La formation sur Open Classroom</a> </p>
+
+                </section>
+
 			</div>
 		</div>
 
