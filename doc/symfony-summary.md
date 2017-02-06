@@ -46,7 +46,7 @@ Puis se rendre sur [http://localhost:8000/](http://localhost:8000/)
 
 > Le serveur fonctionne tant que la commande est en cours d'exécution. Donc pour utiliser d'autres commandes, il faut ouvrir un 2e terminal/console
 
-Se render sur [http://localhost:8000/config.php](http://localhost:8000/config.php) pour vérifier si l'environnement local est bien configuré
+Se rendre sur [http://localhost:8000/config.php](http://localhost:8000/config.php) pour vérifier si l'environnement local est bien configuré
 
 
 ### Création d'un nouveau bundle
