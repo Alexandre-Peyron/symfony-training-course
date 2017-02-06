@@ -7,7 +7,7 @@ Le but de l'exercice est de comprendre les bases de twig: héritage, inclusion, 
 
 #### Les bases
 
-- Créer deux pages qui **hérite** de `base.html.twig`
+- Créer deux pages qui **héritent** de `base.html.twig`
 - Dans `base.html.twig` **inclure** 3 fichiers: 1 header, 1 footer, 1 menu. 
 - Définir ce qu'est un moteur de template.
 - Pourquoi utiliser un moteur de template ?
