@@ -18,16 +18,21 @@ On dit que Symfony est **full stack** car il propose à la fois des dispositifs 
 
 Avec des outils externes on ajoute:
 * ORM ([Doctrine](http://www.doctrine-project.org/)/ [Propel](http://propelorm.org/))
-* Templeting ([Twig](http://twig.sensiolabs.org/))
+* Templating ([Twig](http://twig.sensiolabs.org/))
 * Envoi de mail ([Swift Mailer](http://swiftmailer.org/))
 
 ## Actions de base à faire
+
+L'utilisation de Symfony passe beaucoup par la console/terminal pour les tâches qui s'automatisent. A noter qu'après un peu de pratique vous pourrez créer vos propres commandes.
 
 > Pour avoir la liste des commandes disponibles `php bin/console list`
 
 ### Pour installer Symfony
 
 Se rendre sur [https://symfony.com/download](https://symfony.com/download)
+
+>Dans notre cas, la configuration réseau de l'IUT ne permet pas d'utiliser l'installeur Symfony, un .zip est donc disponible sur ce repository
+
 
 ### A l'installation
 
@@ -108,7 +113,7 @@ class DefaultController extends Controller
 Après création, si vous ajoutez des propriétés à votre entité, par exemple `$is_enabled`,
 la commande pour mettre à jour les `Getter` et `Setter` est :
 
-`php bin/console doctrine:generate:entities`
+`php bin/console doctrine:generate:entities MyBundle:MyEntity`
 
 ### Pour mettre à jour la base de données
 
