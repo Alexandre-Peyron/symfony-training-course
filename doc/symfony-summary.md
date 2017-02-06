@@ -31,7 +31,7 @@ L'utilisation de Symfony passe beaucoup par la console/terminal pour les tâches
 
 Se rendre sur [https://symfony.com/download](https://symfony.com/download)
 
->Dans notre cas, la configuration réseau de l'IUT ne permet pas d'utiliser l'installeur Symfony, un .zip est donc disponible sur ce repository
+>Dans notre cas, la configuration réseau de l'IUT ne permet pas d'utiliser l'installeur Symfony, un [.zip](https://github.com/Alexandre-Peyron/symfony-licence-presentation/blob/master/symfony%20download/symfony-licence-3.2.zip) est donc disponible sur ce repository
 
 
 ### A l'installation
