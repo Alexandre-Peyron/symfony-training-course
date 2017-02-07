@@ -4,14 +4,14 @@ Première chose à faire, comme toujours, ouvrir la [documentation](https://symf
 
 L'objectif de cet exercice est de comprendre le fonctionnement du routing, des controllers et de la création de pages.
 
-> Important ! Dans le cadre du cours, gardez bien en tête que 1 route = 1 controller = 1 view. Donc pour chaque route, pensez bien à créer un nouveau controller et une nouvelle vue. Ca sera un peu moins le cas en progressant mais pour la compréhension au départ c'est important.
+> Important ! Dans le cadre du cours, gardez bien en tête que 1 route = 1 controller = 1 view. Donc pour chaque route, pensez bien à créer une nouvelle action dans le controller et une nouvelle vue. Ca sera un peu moins le cas en progressant mais pour la compréhension au départ c'est important.
 
 
 ### Controller et route de base
 
 > Dans le cadre de l'exercice, vous pouvez travailler directement dans AppBundle
 
-Créez un premier controller simple :
+Créez un premier controller simple (DefaultController existe déjà dans AppBundle) :
 
 ```php
 namespace AppBundle\Controller;

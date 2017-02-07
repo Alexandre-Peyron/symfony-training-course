@@ -41,9 +41,9 @@ Le but de l'exercice est de comprendre les bases de twig: héritage, inclusion, 
 
 #### Les boucles et conditions
 
-- Créer une entié si c'est pas déjà fait
+- Créer une entité si c'est pas déjà fait
 - Ajouter des data dans votre BDD
-- Afficher **un tableau** avec toutes les données ajoutés (boucle for)
+- Afficher **un tableau** avec toutes les données ajoutées (boucle for)
 - Dans ce tableau, **une cellule sur deux**, ajouter la classe `odd`. (condition if)
 
 
