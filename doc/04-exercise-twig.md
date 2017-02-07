@@ -7,8 +7,12 @@ Le but de l'exercice est de comprendre les bases de twig: héritage, inclusion, 
 
 #### Les bases
 
-- Créer deux pages qui **héritent** de `base.html.twig`
-- Dans `base.html.twig` **inclure** 3 fichiers: 1 header, 1 footer, 1 menu. 
+- Créer ou mettre à jour deux pages, pour qu'elles **héritent** de `base.html.twig`
+- Dans `app/Resources/views` créer 3 fichiers: header, menu, footer.
+- Dans `base.html.twig` **inclure** cest 3 fichiers.
+ 
+ 
+ Pour votre culture personnelle :
 - Définir ce qu'est un moteur de template.
 - Pourquoi utiliser un moteur de template ?
 - Citer un concurrent de Twig ?
@@ -17,16 +21,15 @@ Le but de l'exercice est de comprendre les bases de twig: héritage, inclusion, 
 
 #### Intégration
 
-- Ajouter un fichier **css** dans `base.html.twig` via le gestionnaire d'asset
-- Ajouter un fichier **js** dans `base.html.twig` via le gestionnaire d'asset
+- Ajouter un fichier **css** dans `base.html.twig` via la fonction asset
+- Ajouter un fichier **js** dans `base.html.twig` via la fonction asset
 - Si vous le souhaitez, ajoutez un framework CSS (bootstrap...)
 
 
 #### Les Formulaires
 
-- Créer une page qui affiche un **formulaire** (de contact par exemple)
+Si ce n'est pas déjà fait, créer une page qui affiche un **formulaire** (de contact par exemple)
 
-> Pour afficher un formulaire, il est plus pratique de créer une entité en amont, mais pas forcément nécessaire
 
 ```twig
 {{ form_start(form) }}
@@ -41,9 +44,12 @@ Le but de l'exercice est de comprendre les bases de twig: héritage, inclusion, 
 
 #### Les boucles et conditions
 
+Si ce n'est pas déjà fait: 
 - Créer une entité si c'est pas déjà fait
 - Ajouter des data dans votre BDD
 - Afficher **un tableau** avec toutes les données ajoutées (boucle for)
+
+Ensuite:
 - Dans ce tableau, **une cellule sur deux**, ajouter la classe `odd`. (condition if)
 
 
