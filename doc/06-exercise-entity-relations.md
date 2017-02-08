@@ -15,7 +15,8 @@ C'est un cas relativement rare, mais le principal usage se fait dans les relatio
 Exemple: un article parent d'un autre. La table faire référence à elle même, ça s'appelle du `self-referencing`
 
 - Créez une relation de self-referencing sur l'une de vos entités
-- mettre à jour la base de données
+- Mettre à jour les `getter` et `setter` avec `php bin/console doctrine:generate:entities MyBundle:MyEntity`
+- mettre à jour la base de données `php bin/console doctrine:schema:update --force`
 
 ```php
     /**
@@ -28,9 +29,9 @@ Exemple: un article parent d'un autre. La table faire référence à elle même,
 
 ###ManyToOne
 
-Pour comprendre une relation ManyToOne dans exemple, on va créer une nouvelle entité `ArticleType` avec les champs 'name' et 'description'.
+Pour comprendre une relation ManyToOne dans exemple, on va créer une nouvelle entité `Category` avec les champs 'name' et 'description'.
 
-Donc un article possède un seul type, un type peut être associé à plusieurs articles.
+Donc un article possède une seule catégorie, une catégorie peut être associée à plusieurs articles.
 
 Maintenant créez la relation entre les 2 entités.
 
@@ -40,10 +41,10 @@ Maintenant créez la relation entre les 2 entités.
         // ...
     
         /**
-         * @ORM\ManyToOne(targetEntity="ArticleType", inversedBy="articles")
-         * @ORM\JoinColumn(name="article_type_id", referencedColumnName="id")
+         * @ORM\ManyToOne(targetEntity="Cartegory", inversedBy="articles")
+         * @ORM\JoinColumn(name="category_id", referencedColumnName="id")
          */
-        private $articleType;
+        private $category;
     }
 ```
 
@@ -60,12 +61,12 @@ Si jamais elle ne se trouve pas dans le même dossier/bundle, il faut mettre le 
 ```php
     use Doctrine\Common\Collections\ArrayCollection;
     
-    class ArticleType
+    class Category
     {
         // ...
     
         /**
-         * @ORM\OneToMany(targetEntity="Article", mappedBy="articleType")
+         * @ORM\OneToMany(targetEntity="Article", mappedBy="category")
          */
         private $articles;
     
@@ -79,5 +80,62 @@ Si jamais elle ne se trouve pas dans le même dossier/bundle, il faut mettre le 
 
 > **mappedBy** correspond à la variable utilisée dans l'entité cible
  
+- Mettre à jour les `getter` et `setter` avec `php bin/console doctrine:generate:entities MyBundle:MyEntity`
+- mettre à jour la base de données `php bin/console doctrine:schema:update --force`
 
 ###ManyToMany
+
+La relation ManyToMany est la plus complexe. Dans notre exemple, on peut créer une nouvelle
+entité `Tag`. Un article peu avoir plusieurs tags, et un tag plusieurs articles.
+
+Maintenant créez la relation entre les 2 entités.
+
+```php
+
+    class Article
+    {
+       //...
+    
+        /**
+        * @ORM\ManyToMany(targetEntity="Tag", inversedBy="articles" cascade={"persist"})
+        * @ORM\JoinTable(name="article_tags")
+        */
+        */
+        private $tags;
+        
+        
+        public function __construct()
+        {
+            $this->tags = new ArrayCollection();
+        }
+        
+    }
+
+```
+
+```php
+
+    class Tag
+    {
+        //...
+    
+        /**
+         * @ORM\ManyToMany(targetEntity="Article", mappedBy="tags")
+         */
+        private $articles;
+    
+        public function __construct() {
+            $this->articles = new ArrayCollection();
+        }
+        
+        
+        
+    }
+
+```
+
+
+- Mettre à jour les `getter` et `setter` avec `php bin/console doctrine:generate:entities MyBundle:MyEntity`
+- mettre à jour la base de données `php bin/console doctrine:schema:update --force`
+
+> En regardant votre BDD, vous pouvez vous rendre contre que la table intermédiaire a été créé automatiquement
