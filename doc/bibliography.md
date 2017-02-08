@@ -1,11 +1,13 @@
 #Bibliographie
 
-Liste non exaustive de livres sur le développement. 
+Liste non exaustive de livres ou sources sur le développement. 
 
 A noter, qu'ils concernent plus généralement une "philosophie" autour du développement ou l'apprentissage
 de design patterns et assez peu des framework ou des langages.
 
 La doc Symfony sur [les fondamentaux du HTTP](http://symfony.com/doc/current/introduction/http_fundamentals.html)
+
+[Liste de design pattern en PHP](https://github.com/domnikl/DesignPatternsPHP)
 
 [Soft Skills](https://www.amazon.fr/Soft-Skills-software-developers-manual/dp/1617292397)
 Pas de développement ici, mais toutes les compétences autour de votre métier pour faire la différence
