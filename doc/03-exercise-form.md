@@ -50,6 +50,7 @@ $form = $this->createFormBuilder($task)`
         return $this->createFormBuilder()
             ->setAction($this->generateUrl('article_delete', array('id' => $article->getId())))
             ->setMethod('DELETE')
+            ->add('delete', SubmitType::class)
             ->getForm()
         ;
     }
