@@ -42,6 +42,6 @@ Pour approfondir, vous pouvez :
     - créer un controller qui renvoie les infos d'une seul entité
     - créer un controller pour ajouter une nouvelle ligne en base
     - créer un controller pour modifier une ligne en base
-    - renvoyer des messages d'erreur en JSON avec le bon code [HTTP](https://fr.wikipedia.org/wiki/Liste_des_codes_HTTP)
+    - renvoyer des messages d'erreur en JSON avec le bon code [HTTP](https://fr.wikipedia.org/wiki/Liste_des_codes_HTTPw)
 
 
