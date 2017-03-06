@@ -18,7 +18,7 @@ Le but de l'exercice est de créer et utiliser les formulaires dans Symfony.
 - créer le formulaire dans le controller et l'afficher dans le template twig
 
 ```php
-$form = $this->createFormBuilder($task)`
+$form = $this->createFormBuilder($task)
 ```
 
 - dans le controller, tester la validité et la soumission du formulaire et ajouter les nouvelles données en base.
