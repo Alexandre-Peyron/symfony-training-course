@@ -37,7 +37,7 @@ class DefaultController
             // a gauche, le nom qui sera utilisé dans le template
             // a droite, la valeur
             'number' => $number
-        );
+        ));
     }
 }
 ```
