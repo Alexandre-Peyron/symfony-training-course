@@ -1,4 +1,4 @@
-#Routing et controllers
+# Routing et controllers
 
 Première chose à faire, comme toujours, ouvrir la [documentation](https://symfony.com/doc/current/controller.html) !
 

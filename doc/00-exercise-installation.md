@@ -1,4 +1,4 @@
-#Installation
+# Installation
 
 Première chose à faire, comme toujours, ouvrir la [documentation](https://symfony.com/doc/current/setup.html) !
 
