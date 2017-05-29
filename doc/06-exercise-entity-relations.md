@@ -1,4 +1,4 @@
-#Les relations
+# Les relations
 
 Première chose à faire, comme toujours, ouvrir la [documentation](http://symfony.com/doc/current/doctrine/associations.html), 
 [ici aussi](http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/association-mapping.html).
@@ -8,7 +8,7 @@ Le but de l'exercice est de comprendre et mettre en place des relations entre le
 
 
 
-###OneToOne
+### OneToOne
 
 Une relation OneToOne signifie qu'un élément d'une table est associé à un unique élement d'une autre table (et inversement).
 C'est un cas relativement rare, mais le principal usage se fait dans les relations parent > enfant.
@@ -27,7 +27,7 @@ Exemple: un article parent d'un autre. La table faire référence à elle même,
 ```
 
 
-###ManyToOne
+### ManyToOne
 
 Pour comprendre une relation ManyToOne dans exemple, on va créer une nouvelle entité `Category` avec les champs 'name' et 'description'.
 
@@ -83,7 +83,7 @@ Si jamais elle ne se trouve pas dans le même dossier/bundle, il faut mettre le 
 - Mettre à jour les `getter` et `setter` avec `php bin/console doctrine:generate:entities MyBundle:MyEntity`
 - mettre à jour la base de données `php bin/console doctrine:schema:update --force`
 
-###ManyToMany
+### ManyToMany
 
 La relation ManyToMany est la plus complexe. Dans notre exemple, on peut créer une nouvelle
 entité `Tag`. Un article peu avoir plusieurs tags, et un tag plusieurs articles.

@@ -1,11 +1,11 @@
-#Les formulaires
+# Les formulaires
 
 Première chose à faire, comme toujours, ouvrir la [documentation](http://symfony.com/doc/current/forms.html) !
 
 Le but de l'exercice est de créer et utiliser les formulaires dans Symfony.
 
 
-###Insert
+### Insert
 
 > Une commande permet de générer une formulaire depuis une entité, mais nous allons d'abord le faire à la main dans le controller
 >
@@ -25,7 +25,7 @@ $form = $this->createFormBuilder($task)
 - après l'ajout en base, rediriger vers la page de l'élément nouvellement créé.
 
 
-###Update
+### Update
 
 - Créer une classe de formulaire, y insérer notre formulaire existant
 - mettre à jour le controller pour utiliser la classe et ne plus créer directement le form dans le controller
@@ -35,7 +35,7 @@ $form = $this->createFormBuilder($task)
 - mettre à jour l'entité en base après soumission du formulaire
 
 
-###Delete
+### Delete
 
 - ajouter cette fonction, sans route, dans votre controller
 

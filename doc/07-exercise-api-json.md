@@ -1,4 +1,4 @@
-#API
+# API
 
 Le but ici est de créer un controller qui renvoie du JSON à la place de nos templates twig habituels.
 
