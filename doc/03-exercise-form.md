@@ -12,16 +12,20 @@ Le but de l'exercice est de créer et utiliser les formulaires dans Symfony.
 - [créer le formulaire](http://symfony.com/doc/current/forms.html#building-the-form) dans le controller et l'afficher dans le template twig
 
 ```php
-$form = $this->createFormBuilder($task)
+$myEntity = new MyEntity();
+
+$form = $this->createFormBuilder($myEntity)
+....
+
 ```
 
 - dans le controller, tester la validité et la soumission du formulaire et ajouter les nouvelles données en base.
 - après l'ajout en base, rediriger vers la page de l'élément nouvellement créé.
 
-> Une commande permet de générer un formulaire depuis une entité
+> Une commande permet de générer un formulaire depuis une entité, dans MyBundle/Form/MyEntityType.php
 >
 > ```bash
-> php bin/console doctrine:generate:form
+> php bin/console doctrine:generate:form MyBundle:MyEntity
 > ```
 
 
