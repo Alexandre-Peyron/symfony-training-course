@@ -1,6 +1,6 @@
 # Utilisation de Twig
 
-Première chose à faire, comme toujours, ouvrir la [documentation](http://symfony.com/doc/current/templating.html){:target="_blank"} !
+Première chose à faire, comme toujours, ouvrir la [documentation](http://symfony.com/doc/current/templating.html) !
 
 Le but de l'exercice est de comprendre les bases de twig: héritage, inclusion, gestion des blocs. Ainsi que comment personnaliser l'affichage des éléments symfony.
 
