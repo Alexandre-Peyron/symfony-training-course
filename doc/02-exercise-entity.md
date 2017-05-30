@@ -39,6 +39,10 @@ La commande pour créer une nouvelle entité est:
 php bin/console doctrine:generate:entity
 
 ```
+Le nom de l'entité se compose ainsi: MyBundle:MyEntity
+Et on choisira les "annotations" pour le format.
+
+Il faut ensuite répondre aux questions posées pour ajouter les différents champs de l'entité.
 
 Maintenant que notre entité est créée, il faut mettre à jour notre base de données.
 Pour voir les requêtes à faire pour syncroniser nos entités à la BDD sont :
