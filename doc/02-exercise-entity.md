@@ -39,7 +39,8 @@ La commande pour créer une nouvelle entité est:
 php bin/console doctrine:generate:entity
 
 ```
-Le nom de l'entité se compose ainsi: MyBundle:MyEntity
+Le nom de l'entité se compose ainsi   MyBundle:MyEntity
+
 Et on choisira les "annotations" pour le format.
 
 Il faut ensuite répondre aux questions posées pour ajouter les différents champs de l'entité.
