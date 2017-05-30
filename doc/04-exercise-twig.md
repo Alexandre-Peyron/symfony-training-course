@@ -1,6 +1,6 @@
 # Utilisation de Twig
 
-Première chose à faire, comme toujours, ouvrir la [documentation](http://symfony.com/doc/current/templating.html) !
+Première chose à faire, comme toujours, ouvrir la [documentation](http://symfony.com/doc/current/templating.html){:target="_blank"} !
 
 Le but de l'exercice est de comprendre les bases de twig: héritage, inclusion, gestion des blocs. Ainsi que comment personnaliser l'affichage des éléments symfony.
 
@@ -9,13 +9,13 @@ Le but de l'exercice est de comprendre les bases de twig: héritage, inclusion, 
 
 - Créer ou mettre à jour deux pages, pour qu'elles **héritent** de `base.html.twig`
 - Dans `app/Resources/views` créer 3 fichiers: header, menu, footer.
-- Dans `base.html.twig` **inclure** cest 3 fichiers.
+- Dans `base.html.twig` **inclure** ces 3 fichiers.
  
  
  Pour votre culture personnelle :
 - Définir ce qu'est un moteur de template.
 - Pourquoi utiliser un moteur de template ?
-- Citer un concurrent de Twig ?
+- Citer un équivalent de Twig ?
 - Quels autres framework/CMS utilisent un moteur de template ?
 
 
@@ -23,7 +23,7 @@ Le but de l'exercice est de comprendre les bases de twig: héritage, inclusion, 
 
 - Ajouter un fichier **css** dans `base.html.twig` via la fonction asset
 - Ajouter un fichier **js** dans `base.html.twig` via la fonction asset
-- Si vous le souhaitez, ajoutez un framework CSS (bootstrap...)
+- Si vous le souhaitez, ajoutez un framework CSS (bootstrap, foundation...)
 
 
 #### Les Formulaires
