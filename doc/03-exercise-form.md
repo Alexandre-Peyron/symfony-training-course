@@ -9,7 +9,7 @@ Le but de l'exercice est de créer et utiliser les formulaires dans Symfony.
 
 - si ce n'est pas le cas, créer une entité avec 5 types de champs différents
 - créer une nouvelle action de controller avec une route du genre `myentity/new`
-- créer le formulaire dans le controller et l'afficher dans le template twig
+- [créer le formulaire dans](http://symfony.com/doc/current/forms.html#building-the-form) le controller et l'afficher dans le template twig
 
 ```php
 $form = $this->createFormBuilder($task)
