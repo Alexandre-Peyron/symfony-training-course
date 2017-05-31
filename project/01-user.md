@@ -16,12 +16,14 @@ Idem dans `vendor`, un nouveau dossier FOS est apparu.
 
 ### Friend Of Symfony
 
+Vous pouvez [créer un nouveau Bundle](http://symfony.com/doc/current/bundles/SensioGeneratorBundle/commands/generate_bundle.html) dans votre projet qui servira à la gestion des utilisateurs : `AdminUserBundle`
+
 Il faut maintenant configurer le bundle, tout se passe [ici](https://symfony.com/doc/master/bundles/FOSUserBundle/index.html)
 
 
 Dans l'ordre, vous allez:
-- activer le bundle dans `app/AppKernel.php`
-- créer un nouvelle entity User qui étend du User de FOS
+- activer le bundle externe dans `app/AppKernel.php`
+- créer un nouvelle entity User (dans notre bundle `AdminUserBundle`) qui étend du User de FOS
 - modifier le `app/config/security.yml` pour appliquer les nouvelles régles d'authentification
 - configurer le bundle dans `app/config/config.yml`
 - ajouter les routes de FOSUserBundle
