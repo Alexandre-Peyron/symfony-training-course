@@ -2,6 +2,8 @@
 
 Je vous conseille maintenant de vous pencher sur la création et la configuration de vos entités.
 
+> Par convention, en nomme les entités en anglais et au singulier
+
 Vous pouvez créer un nouveau Bundle `AdminMonProjectThemeUnTrucBundle` qui va centraliser toutes ces entités.
 
 Utilisez l'outil de création d'entités
