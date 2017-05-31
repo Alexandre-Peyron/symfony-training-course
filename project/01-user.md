@@ -18,7 +18,11 @@ Idem dans `vendor`, un nouveau dossier FOS est apparu.
 
 Vous pouvez [créer un nouveau Bundle](http://symfony.com/doc/current/bundles/SensioGeneratorBundle/commands/generate_bundle.html) dans votre projet qui servira à la gestion des utilisateurs : `AdminUserBundle`
 
-Il faut maintenant configurer le bundle, tout se passe [ici](https://symfony.com/doc/master/bundles/FOSUserBundle/index.html)
+```bash
+ php app/console generate:bundle
+```
+
+Il faut maintenant configurer le bundle externe FosUserBundle, tout se passe [ici](https://symfony.com/doc/master/bundles/FOSUserBundle/index.html)
 
 
 Dans l'ordre, vous allez:
