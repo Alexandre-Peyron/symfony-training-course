@@ -41,7 +41,7 @@ Maintenant créez la relation entre les 2 entités.
         // ...
     
         /**
-         * @ORM\ManyToOne(targetEntity="Cartegory", inversedBy="articles")
+         * @ORM\ManyToOne(targetEntity="Category", inversedBy="articles")
          * @ORM\JoinColumn(name="category_id", referencedColumnName="id")
          */
         private $category;
