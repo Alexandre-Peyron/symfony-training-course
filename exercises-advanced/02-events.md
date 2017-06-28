@@ -122,3 +122,11 @@ class EventToMailConnector implements EventSubscriberInterface
 ```
 
 A vous de jouer maintenant.
+
+Il faut:
+    - déclarer le service
+    - déclarer l'écoute sur l'évènement MailEvent::SEND_MAIL
+    - coder la fonction d'envoi de mail
+
+
+> Symfony possède par défaut un bundle pour l'envoi de mail, nommé SwiftMailer
