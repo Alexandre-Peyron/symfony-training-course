@@ -56,7 +56,7 @@ Nous avons créé ici une route `@Route(/"lucky/number")` et une action de contr
 
 Ajoutez à présent le template associé : `/src/AppBundle/Resources/views/Default/number.html.twig`
 
-```
+```twig
 {% extends '::base.html.twig' %}
 
 {{number}}
