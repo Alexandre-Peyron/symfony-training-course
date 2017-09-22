@@ -28,6 +28,8 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 
 class DefaultController
 {
+    // [...]
+    
     /**
      * @Route("/lucky/number/", name="lucky_number")  //CECI EST DU CODE !!!! C'est une annotation PHP
      *
@@ -52,9 +54,11 @@ class DefaultController
 ```
 Nous avons créé ici une route `@Route(/"lucky/number")` et une action de controller `numberAction()`.
 
-Ajoutons à présent le template associé : `/src/AppBundle/Resources/views/Default/number.html.twig`
+Ajoutez à présent le template associé : `/src/AppBundle/Resources/views/Default/number.html.twig`
 
 ```
+{% extends '::base.html.twig' %}
+
 {{number}}
 ```
 
@@ -65,8 +69,11 @@ Maintenant, ajoutez un paramètre à l'url qui correspond au nombre max :
  
  
 ```php
+    // [...]
+
     /**
-     * @Route("/lucky/number/{max}", name="lucky_number")  
+     * @Route("/lucky/number/{max}", name="lucky_number")  // Ceci est toujours du code !
+     *
      * exemple d'url: http://localhost:8080/lucky/number/100
      *
      */
@@ -78,25 +85,27 @@ Maintenant, ajoutez un paramètre à l'url qui correspond au nombre max :
             'number' => $number
         );
     }
+    
+    // [...]
 ```
 
-Etape suivante, ajouter une contrainte pour que ce paramètre soit obligatoirement un nombre.
+Etape suivante, ajouter une contrainte pour que ce paramètre soit obligatoirement un nombre. Pas de code en plus dans le controller ici, tout se fait en annotation, fouillez dans la doc pour trouver.
 
 Dernière étape, faire en sorte que ce paramètre soit optionnel et qu'il est une valeur par défault;
 
-> Lors que vous créez un nouveau controller, il y a une nomenclature précise à respecter. Le nom de la fonction doit toujours finir par "Action".
-
 
 ### Routing avancé
+
+> Lors que vous créez un nouveau controller, il y a une nomenclature précise à respecter. Le nom de la fonction doit toujours être suffixée (finir) par "Action".
 
 Créez une nouvelle action dans le `controller` avec comme route de base `/blog`.
 
 Ajoutez 3 paramètres à l'URL: _locale, year, title.
 
-Dans la vue, afficher une phrase du genre: "Voici l'article $title, de l'année $year, en langue $_locale".
+Dans la vue `blog.html.twig`, affichez une phrase du genre: "Voici l'article $title, de l'année $year, en langue $_locale".
 
 Ajoutez les contraintes suivantes:
-- _locale ne peut être que fr ou en
+- _locale ne peut être que 'fr' ou 'en'
 - year doit être un nombre à 4 chiffre
 - title n'est composé que de lettres, chiffres ou -
 
