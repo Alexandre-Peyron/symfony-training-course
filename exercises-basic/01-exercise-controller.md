@@ -59,7 +59,9 @@ Ajoutez à présent le template associé : `/src/AppBundle/Resources/views/Defau
 ```twig
 {% extends '::base.html.twig' %}
 
-{{number}}
+{% block body %}
+    {{number}}
+{% endblock %}
 ```
 
 Accédez maintenant à l'URL [http://localhost:8080/lucky/number/](http://localhost:8080/lucky/number)
