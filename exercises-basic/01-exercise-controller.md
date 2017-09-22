@@ -4,14 +4,21 @@ Première chose à faire, comme toujours, ouvrir la [documentation](https://symf
 
 L'objectif de cet exercice est de comprendre le fonctionnement du routing, des controllers et de la création de pages.
 
-> Important ! Dans le cadre du cours, gardez bien en tête que 1 route = 1 controller = 1 view. Donc pour chaque route, pensez bien à créer une nouvelle action dans le controller et une nouvelle vue. Ca sera un peu moins le cas en progressant mais pour la compréhension au départ c'est important.
+> **Une route** : c'est le chemin/URL vers votre page.
+
+> **Un controller** : c'est la fonction PHP qui sera exécutée lorsqu'on arrivera sur la route associée. Cette fonction doit toujours retourner un résultat, l'objet `Response` de Symfony. Cette réponse peut contenir une view (HTML), du JSON, du XML, une redirection, une erreur 404...
+
+> **Une view** : elle correspond à l'affichage de votre page.
+
+> **Important !** Dans le cadre du cours, gardez bien en tête que **1 route = 1 controller = 1 view**. Donc pour chaque route, pensez bien à créer une nouvelle action dans le controller et une nouvelle vue. 
+Plus tard, on verra que ce n'est pas toujours le cas mais pour la compréhension au départ c'est important.
 
 
 ### Controller et route de base
 
-> Dans le cadre de l'exercice, vous pouvez travailler directement dans AppBundle
+> Dans le cadre de l'exercice, vous pouvez travailler directement dans **src/AppBundle** et dans la class de controller déjà créée **Controller/DefaultController**
 
-Créez un premier controller simple (DefaultController existe déjà dans AppBundle) :
+Créez une première action de controller simple :
 
 ```php
 namespace AppBundle\Controller;
@@ -22,13 +29,13 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 class DefaultController
 {
     /**
-     * @Route("/lucky/number/", name="lucky_number")  
-     * au final, cela donne l'url suivante: http://localhost:8080/lucky/number
+     * @Route("/lucky/number/", name="lucky_number")  //CECI EST DU CODE !!!! C'est une annotation PHP
+     *
+     * Au final, cela donne l'url suivante: http://localhost:8080/lucky/number/
      *
      */
     public function numberAction()
     {
-    
         // génération d'un nombre aléatoire
         $number = mt_rand(0, 100);
         //ici on va chercher le template et on lui transmet la variable
@@ -39,8 +46,20 @@ class DefaultController
             'number' => $number
         ));
     }
+    
+    // [...]
 }
 ```
+Nous avons créé ici une route `@Route(/"lucky/number")` et une action de controller `numberAction()`.
+
+Ajoutons à présent le template associé : `/src/AppBundle/Resources/views/Default/number.html.twig`
+
+```
+{{number}}
+```
+
+Accédez maintenant à l'URL [http://localhost:8080/lucky/number/](http://localhost:8080/lucky/number)
+
 
 Maintenant, ajoutez un paramètre à l'url qui correspond au nombre max :
  
@@ -53,7 +72,6 @@ Maintenant, ajoutez un paramètre à l'url qui correspond au nombre max :
      */
     public function numberAction($max)
     {
-   
         $number = mt_rand(0, $max);
         
         return $this->render('AppBundle:Default:number.html.twig', array(
