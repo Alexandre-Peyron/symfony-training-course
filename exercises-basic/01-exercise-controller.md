@@ -89,9 +89,9 @@ Maintenant, ajoutez un paramètre à l'url qui correspond au nombre max :
     // [...]
 ```
 
-Etape suivante, ajouter une contrainte pour que ce paramètre soit obligatoirement un nombre. Pas de code en plus dans le controller ici, tout se fait en annotation, fouillez dans la doc pour trouver.
+Etape suivante, ajoutez une contrainte pour que ce paramètre soit obligatoirement un nombre. Pas de code en plus dans le controller ici, tout se fait en annotation, fouillez dans la doc pour trouver.
 
-Dernière étape, faire en sorte que ce paramètre soit optionnel et qu'il est une valeur par défault;
+Dernière étape, faire en sorte que ce paramètre soit optionnel et qu'il ait une valeur par défault;
 
 
 ### Routing avancé
