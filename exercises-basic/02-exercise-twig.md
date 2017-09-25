@@ -13,9 +13,7 @@ Le but de l'exercice est de comprendre les bases de twig: héritage, inclusion, 
 {% extends '::base.html.twig' %}
 
 {% block body %}
-    {% block content %}
-    
-    {% endblock content %}
+    {% block content %}{% endblock content %}
 {% endblock body %}
 ```
 
@@ -28,8 +26,8 @@ Le but de l'exercice est de comprendre les bases de twig: héritage, inclusion, 
 
 ```twig
 <ul>
-    <li><a href="{{path('/')}}">Accueil</a></li>
-    <li><a href="{{path('/lucky_number')}}">Lucky Number</a></li>
+    <li><a href="{{ path('homepage') }}">Accueil</a></li>
+    <li><a href="{{ path('lucky_number') }}">Lucky Number</a></li>
 </ul>
 ```
 
