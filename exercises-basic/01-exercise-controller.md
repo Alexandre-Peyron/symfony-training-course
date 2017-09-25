@@ -23,10 +23,11 @@ Créez une première action de controller simple :
 ```php
 namespace AppBundle\Controller;
 
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 
-class DefaultController
+class DefaultController extends Controller
 {
     // [...]
     
