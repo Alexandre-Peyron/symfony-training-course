@@ -28,8 +28,8 @@ Le but de l'exercice est de comprendre les bases de twig: héritage, inclusion, 
 
 ```twig
 <ul>
-    <li><a href="/">Accueil</a></li>
-    <li><a href="/lucky/number">Lucky Number</a></li>
+    <li><a href="{{path('/')}}">Accueil</a></li>
+    <li><a href="{{path('/lucky_number')}}">Lucky Number</a></li>
 </ul>
 ```
 
