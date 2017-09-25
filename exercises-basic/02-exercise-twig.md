@@ -38,6 +38,8 @@ Le but de l'exercice est de comprendre les bases de twig: héritage, inclusion, 
 ```
 
 - Trouvez comment **inclure** ces 3 fichiers dans `layout.html.twig`.
+
+- Faites hériter les pages précedemment créée (lucky number, homepage), par `{% extends '::layout.html.twig' %}`
  
  
 
