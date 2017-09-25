@@ -84,7 +84,7 @@ Maintenant, ajoutez un paramètre à l'url qui correspond au nombre max :
     {
         $number = mt_rand(0, $max);
         
-        return $this->render(':Default:number.html.twig', array(
+        return $this->render('AppBundle:Default:number.html.twig', array(
             'number' => $number
         );
     }
