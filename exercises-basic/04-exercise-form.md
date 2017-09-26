@@ -7,22 +7,43 @@ Le but de l'exercice est de créer et utiliser les formulaires dans Symfony.
 
 ### Insert
 
-- si ce n'est pas le cas, créer une entité avec 5 types de champs différents
-- créer une nouvelle action de controller avec une route du genre `myentity/new`
-- [créer le formulaire](http://symfony.com/doc/current/forms.html#building-the-form) dans le controller et l'afficher dans le template twig
+- si ce n'est pas le cas, créez une entité avec 5 types de champs différents
+- ajoutez une action de controller avec une route du genre `myentity/new`
+- [créer le formulaire](http://symfony.com/doc/current/forms.html#building-the-form) dans le controller et affichez le dans le template
 
 ```php
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+
 $myEntity = new MyEntity();
 
 $form = $this->createFormBuilder($myEntity)
-....
+    ->add('title', TextType::class)
+//[...]
 
 ```
 
-- dans le controller, tester la validité et la soumission du formulaire et ajouter les nouvelles données en base.
-- après l'ajout en base, rediriger vers la page de l'élément nouvellement créé.
+- dans le controller, testez la validité et la soumission du formulaire et ajoutez les nouvelles données en base.
+- après l'ajout en base, redirigez vers la page de l'élément nouvellement créé.
 
-> Une commande permet de générer un formulaire depuis une entité, dans MyBundle/Form/MyEntityType.php
+```php
+//[...]
+
+$form->handleRequest($request);
+
+if ($form->isSubmitted() && $form->isValid()) {
+    $em = $this->getDoctrine()->getManager();
+    $em->persist($article);
+    $em->flush();
+
+    return $this->redirectToRoute('article_show', array('id' => $article->getId()));
+}
+
+//[...]
+
+```
+
+
+> Une commande permet de générer une class de formulaire depuis une entité, dans MyBundle/Form/MyEntityType.php
 >
 > ```bash
 > php bin/console doctrine:generate:form MyBundle:MyEntity
@@ -46,8 +67,7 @@ $form = $this->createFormBuilder($myEntity)
 
 ```php
     /**
-     * Crée un formulaire pour supprimer un entité Article
-     *
+     * Crée un formulaire pour supprimer un Article
      */
     private function createDeleteForm(Article $article)
     {
