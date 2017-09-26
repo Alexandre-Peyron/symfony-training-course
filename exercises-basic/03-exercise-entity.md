@@ -4,21 +4,23 @@ Première chose à faire, comme toujours, ouvrir la [documentation](http://symfo
 
 Le but de l'exercice est de comprendre le fonctionne de doctrine, des entités et des relations à la base de données.
 
-> Vous pouvez travailler directement en AppBundle, cette fois encore.
+> Doctrine est un ORM, c'est un composant complètement indépendant de Symfony
+
+> ORM (Object Relational Mapping) : Pour faire simple, cela signifie qu'une table dans votre base de données va correspondre à une class dans votre langage de programmation (PHP, Java...) et inversement.
 
 ### Une entité
 
-La première chose à faire est de mettre à jour le fichier `app/config/parameters.yml`.
-Ensuite de créer une base de données dans votre environnement local, soit manuellement, soit via la ligne de commande:
+> Vous pouvez travailler directement dans AppBundle, cette fois encore.
+
+La première chose à faire est de mettre à jour le fichier `app/config/parameters.yml` en fonction de votre environnement de développement. Notamment `database_name`, `database_user` et `database_password`.
+Ensuite créez une base de données dans votre environnement local, soit manuellement, soit via la ligne de commande:
   
 ```bash
 php bin/console doctrine:database:create
 ```
-  
 
-Nous allons maintenant créer une nouvelle entité, mais elle doit posséder les contraintes suivantes:
-
-> Lors de la création d'une entité, Symfony s'occupe automatiquement d'ajouter l'ID, vous n'avez pas besoin de le faire
+Nous allons maintenant créer une nouvelle entité (lisez jusqu'au bout).
+Dans le cadre du cours, elle doit obligatoirement posséder les contraintes suivantes:
 
 - avoir (au moins) un champ de type `string`
 - avoir (au moins) un champ de type `text`
@@ -26,12 +28,17 @@ Nous allons maintenant créer une nouvelle entité, mais elle doit posséder les
 - avoir (au moins) un champ de type `boolean`
 - avoir (au moins) un champ de type `integer`
 
+> Lors de la création d'une entité, Symfony s'occupe automatiquement d'ajouter l'ID, vous n'avez pas besoin de le faire
+
 > Exemple: Entity Article
-> - title | string
-> - content | text
+> - title      | string
+> - content    | text
 > - created_at | datetime
+> - updated_at | datetime
 > - is_enabled | boolean
-> - vote | integer
+> - like       | integer
+
+> Il est également inutile de préfixer les champs de votre table. Ex: `article_title`, `title` suffit. Cela alourdirait votre code inutilement.
 
 La commande pour créer une nouvelle entité est:
 
@@ -39,13 +46,15 @@ La commande pour créer une nouvelle entité est:
 php bin/console doctrine:generate:entity
 
 ```
-Le nom de l'entité se compose ainsi   MyBundle:MyEntity
+Le nom de l'entité se compose ainsi `MyBundle:MyEntity`.
 
 Et on choisira les "annotations" pour le format.
 
-Il faut ensuite répondre aux questions posées pour ajouter les différents champs de l'entité.
+Il faut ensuite répondre aux questions posées pour ajouter les différents champs de l'entité (Nom de l'entité, puis son type...)
 
-Maintenant que notre entité est créée, il faut mettre à jour notre base de données.
+Maintenant que notre entité est créée, allez dans votre bundle, un dossier Entity a été ajouté. Il contient votre nouvelle entité.
+
+A présent, il faut mettre à jour notre base de données.
 Pour voir les requêtes à faire pour syncroniser nos entités à la BDD sont :
 
 ```bash
@@ -63,13 +72,13 @@ Félicitation, votre entité est maintenant fonctionnelle.
 
 ### Dans le controller
 
-> Ajoutez quelques lignes dans votre base de données pour pouvoir effectuer des tests.
+> Ajoutez quelques lignes de fake données dans votre BDD pour pouvoir effectuer des tests.
 
 Le but maintenant est de créer 2 nouvelles actions dans notre controller.
 (1 route = 1 action = 1 view)
 
-- Une action qui liste et affiche tous les éléments de notre nouvelle entité (findAll)
-- Une action qui affiche un seul élément en fonction d'un paramètre dans l'URL (findOneBy)
+- Une action 'listArticleAction()' qui liste et affiche tous les éléments de notre nouvelle entité (findAll)
+- Une action 'showArticleAction($id)' qui affiche un seul élément en fonction d'un paramètre dans l'URL (findOneBy)
 
 L'accès à l'élément seul doit se faire depuis un clique sur un élément de la liste.
 
