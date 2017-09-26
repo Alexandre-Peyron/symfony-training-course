@@ -81,11 +81,3 @@ Le but maintenant est de créer 2 nouvelles actions dans notre controller.
 - Une action 'showArticleAction($id)' qui affiche un seul élément en fonction d'un paramètre dans l'URL (findOneBy)
 
 L'accès à l'élément seul doit se faire depuis un clique sur un élément de la liste.
-
-Une fois tout ceci en place, dans la liste d'éléments, créer une requête qui va lister tous les éléments et les ordonner par date.
-
-Ensuite, ajouter un paramètre optionnel `min` dans la route pour filtrer les éléments et n'afficher que ceux dont le champ `integer` est supérieur à `min`
-
-Dans l'exemple précédent d'entité, si `min = 10`, il faut afficher tous les articles font les votes sont supérieurs à 10.
-
-
