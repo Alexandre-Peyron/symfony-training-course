@@ -36,7 +36,7 @@ Dans le cadre du cours, elle doit obligatoirement posséder les contraintes suiv
 > - created_at | datetime
 > - updated_at | datetime
 > - is_enabled | boolean
-> - like       | integer
+> - nb_like    | integer
 
 > Il est également inutile de préfixer les champs de votre table. Ex: `article_title`, `title` suffit. Cela alourdirait votre code inutilement.
 
