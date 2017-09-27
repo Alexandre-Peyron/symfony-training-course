@@ -7,13 +7,15 @@ et [ici aussi](http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/
 
 Le but de l'exercice est de comprendre et mettre en place des relations entre les entités.
 
+> Les relations dans Symfony correspondent aux jointures au niveau de MySQL. [ici](https://openclassrooms.com/courses/concevez-votre-site-web-avec-php-et-mysql/les-jointures-entre-tables) un article bien construit sur les jointures.
+
 ### ManyToOne
 
-Pour comprendre une relation ManyToOne dans exemple, on va créer une nouvelle entité `Category` avec les champs 'name' et 'description'.
+Pour comprendre une relation ManyToOne dans exemple, créons une nouvelle entité `Category` avec les champs 'name' et 'description'.
 
 **Donc un article possède une seule catégorie, une catégorie peut être associée à plusieurs articles.**
 
-Maintenant créez la relation entre les 2 entités.
+Une fois l'entité générée en ligne de commande, créez la relation entre les 2 entités.
 
 ```php
     class Article
