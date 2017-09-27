@@ -77,8 +77,8 @@ Exemple: un article parent d'un autre. La table fait référence à elle même, 
 
 ```php
     /**
-     * @OneToOne(targetEntity="Article")
-     * @JoinColumn(name="article_id", referencedColumnName="id")
+     * @ORM\OneToOne(targetEntity="Article")
+     * @ORM\JoinColumn(name="article_id", referencedColumnName="id")
      */
     private $article_parent;
 ```
@@ -97,7 +97,7 @@ Maintenant créez la relation entre les 2 entités.
        //...
     
         /**
-        * @ORM\ManyToMany(targetEntity="Tag", inversedBy="articles" cascade={"persist"})
+        * @ORM\ManyToMany(targetEntity="Tag", inversedBy="articles", cascade={"persist"})
         * @ORM\JoinTable(name="article_tags")
         */
         */
