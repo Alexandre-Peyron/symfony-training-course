@@ -9,6 +9,7 @@ Dans un premier temps, notre projet va être composé de 2 entités :
 
 > Product (ManyToOne Type) (ManyToOne Brand)
 > - ref         | string | Référence unique du produit, ex: #20170930PC24
+> - name        | string
 > - description | text
 > - is_enabled  | boolean
 > - is_premium  | boolean | Possibilité d'envoi en mode premium
