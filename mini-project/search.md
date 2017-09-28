@@ -27,3 +27,56 @@ Dans un premier temps, notre projet va être composé de 2 entités :
 > - description | text
 
 Nous avons donc un produit qui est associé à un type et une marque.
+
+Le premier travail est donc de générer et configurer toutes les entités puis d'ajouter des données dans la BDD.
+
+### La vue
+
+Ici rien de très compliqué, on va travailler sur une seule vue.
+
+Pour commencer, affichez la liste des produits sans filtre pour le moment.
+
+Préparez une colonne sur la gauche pour le futur formulaire.
+
+### Le formulaire simple
+
+Créez une classe de formulaire qui pour le moment va traiter les informations de bases de notre produit (donc pas la marque, ni le type).
+
+Affichez le formulaire dans la colonne de gauche.
+
+Testez la validité et la soumission du formulaire.
+
+### La requête
+
+Cette fois, on ne met rien à jour dans la BDD. On va se servir des données soumises dans le formulaire pour modifier la requête qui va lister nos produits.
+
+```php
+  $request->request->get('ref'); //récupère la valeur REF soumise dans la form
+```
+
+Pour la requête, on va ici travailler avec le [query builder de doctrine](https://symfony.com/doc/current/doctrine.html#querying-for-objects-using-doctrine-s-query-builder) directement dans le controller pour le moment.
+
+```php
+$price = $request->request->get('price');
+
+$repository = $this->getDoctrine()->getRepository(Product::class);
+
+$query = $repository->createQueryBuilder('p')
+    
+if($price > 0) {
+    $query->where('p.price > :price')
+          ->setParameter('price', $price)
+}
+
+$query->orderBy('p.price', 'ASC')
+      ->getQuery();
+
+$products = $query->getResult();
+
+```
+
+
+
+### La pagination
+
+Afficher seulement 10 articles à la fois. Générer une pagination.
