@@ -51,7 +51,11 @@ Testez la validité et la soumission du formulaire.
 Cette fois, on ne met rien à jour dans la BDD. On va se servir des données soumises dans le formulaire pour modifier la requête qui va lister nos produits.
 
 ```php
-  $request->request->get('ref'); //récupère la valeur REF soumise dans la form
+  $request->request->get('form'); //récupère un tableau contenant toutes les valeurs du formulaire
+```
+
+```php
+  $request->request->get('form')['price']; 
 ```
 
 Pour la requête, on va ici travailler avec le [query builder de doctrine](https://symfony.com/doc/current/doctrine.html#querying-for-objects-using-doctrine-s-query-builder) directement dans le controller pour le moment.
