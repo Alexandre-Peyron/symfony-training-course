@@ -5,7 +5,7 @@ Voici un [exemple](https://www.amazon.fr/s/ref=sr_nr_n_1?fst=asa%3Aoff&rh=n%3A63
 
 ### Les entités 
 
-Dans un premier temps, notre projet va être composé de 2 entités :
+Dans un premier temps, notre projet va être composé de 3 entités :
 
 > Product (ManyToOne Type) (ManyToOne Brand)
 > - ref         | string | Référence unique du produit, ex: #20170930PC24
