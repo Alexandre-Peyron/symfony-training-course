@@ -2,7 +2,7 @@
 
 Première chose à faire, comme toujours, ouvrir la [documentation](http://symfony.com/doc/current/doctrine.html) !
 
-Le but de l'exercice est de comprendre le fonctionne de doctrine, des entités et des relations à la base de données.
+Le but de l'exercice est de comprendre le fonctionnement de doctrine, des entités et des relations à la base de données.
 
 > Doctrine est un ORM, c'est un composant complètement indépendant de Symfony
 
