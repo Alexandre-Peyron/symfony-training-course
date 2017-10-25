@@ -1,0 +1,9 @@
+[submodule "projects/symfony-training-course-project-blog"]
+	path = projects/symfony-training-course-project-blog
+	url = https://github.com/Alexandre-Peyron/symfony-training-course-project-blog
+[submodule "projects/symfony-training-course-project-search"]
+	path = projects/symfony-training-course-project-search
+	url = git@github.com:Alexandre-Peyron/symfony-training-course-project-search.git
+[submodule "projects/symfony-training-course-project-api"]
+	path = projects/symfony-training-course-project-api
+	url = git@github.com:Alexandre-Peyron/symfony-training-course-project-api.git
