@@ -1,12 +1,12 @@
 [submodule "projects-sample/symfony-training-course-project-api"]
 	path = projects-sample/symfony-training-course-project-api
-	url = git@github.com:Alexandre-Peyron/symfony-training-course-project-api.git
+	url = https://github.com/Alexandre-Peyron/symfony-training-course-project-api.git
 [submodule "projects-sample/symfony-training-course-project-search"]
 	path = projects-sample/symfony-training-course-project-search
-	url = git@github.com:Alexandre-Peyron/symfony-training-course-project-search.git
+	url = https://github.com/Alexandre-Peyron/symfony-training-course-project-search.git
 [submodule "projects-sample/symfony-training-course-project-blog"]
 	path = projects-sample/symfony-training-course-project-blog
-	url = git@github.com:Alexandre-Peyron/symfony-training-course-project-blog.git
+	url = https://github.com/Alexandre-Peyron/symfony-training-course-project-blog.git
 [submodule "projects-sample/demo"]
 	path = projects-sample/demo
 	url = https://github.com/symfony/demo.git
