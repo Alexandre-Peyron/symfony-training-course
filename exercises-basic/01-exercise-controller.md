@@ -95,9 +95,13 @@ Maintenant, ajoutez un paramètre à l'url qui correspond au nombre max :
 Etape suivante, ajoutez une contrainte pour que ce paramètre soit obligatoirement un nombre. Pas de code en plus dans le controller ici, tout se fait en annotation, fouillez dans la doc pour trouver.
 
 Dernière étape, faire en sorte que ce paramètre soit optionnel et qu'il ait une valeur par défault;
+> Attention : Une fois le nombre devenu optionnel, retirez le de l'URL 
+> mais pensez également à retirer le dernier "/"
 
 
 ### Routing avancé
+
+Si vous ne l'aviez pas encore ouverte voici la doc concernant le [routing](https://symfony.com/doc/3.4/routing.html).
 
 > Lors que vous créez un nouveau controller, il y a une nomenclature précise à respecter. Le nom de la fonction doit toujours être suffixée (finir) par "Action".
 
