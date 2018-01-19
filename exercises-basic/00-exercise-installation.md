@@ -41,8 +41,16 @@ dans le cas contraire, il faut procéder à quelques manipulations
 
 Ouvrez un terminal/console et placez vous dans le futur dossier parent de votre projet.
 
-Suivez ensuite les étapes de la documentation, [*Creating Symfony Applications*](http://symfony.com/doc/current/setup.html#creating-symfony-applications), pour créer une nouvelle application Symfony. 
+> Dans le cas où l'infrasture réseau ne vous permettrait pas d'effectuer les actions suivantes, il un [.zip](../symfony%20download/) avec une version de Symfony 3.4
+
+Suivez ensuite les étapes de la documentation, [*Creating Symfony Applications*](http://symfony.com/doc/3.4/setup.html#creating-symfony-applications), pour créer une nouvelle application Symfony. 
 Nommez la comme vous le souhaitez (symfony-discovery par exemple). Nous travaillerons avec la dernière version stable.
+
+Utilisez la commande suivante :
+
+```bash
+symfony new my_project_name 3.4
+```
 
 Via la console, placez vous maintenant dans le dossier nouvellement créé.
 
