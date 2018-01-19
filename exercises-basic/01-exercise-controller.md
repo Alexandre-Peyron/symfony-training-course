@@ -42,7 +42,7 @@ class DefaultController extends Controller
         // génération d'un nombre aléatoire
         $number = mt_rand(0, 100);
         //ici on va chercher le template et on lui transmet la variable
-        return $this->render('AppBundle:Default:number.html.twig', array(
+        return $this->render('default/number.html.twig', array(
             // pour fournir des variables au template
             // a gauche, le nom qui sera utilisé dans le template
             // a droite, la valeur
@@ -55,10 +55,10 @@ class DefaultController extends Controller
 ```
 Nous avons créé ici une route `@Route(/"lucky/number")` et une action de controller `numberAction()`.
 
-Ajoutez à présent le template associé : `/src/AppBundle/Resources/views/Default/number.html.twig`
+Ajoutez à présent le template associé : `/app/Resources/views/default/number.html.twig`
 
 ```twig
-{% extends '::base.html.twig' %}
+{% extends 'base.html.twig' %}
 
 {% block body %}
     {{number}}
@@ -84,7 +84,7 @@ Maintenant, ajoutez un paramètre à l'url qui correspond au nombre max :
     {
         $number = mt_rand(0, $max);
         
-        return $this->render('AppBundle:Default:number.html.twig', array(
+        return $this->render('default/number.html.twig', array(
             'number' => $number
         );
     }
