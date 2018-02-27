@@ -34,7 +34,7 @@ class DefaultController extends Controller
     /**
      * @Route("/lucky/number/", name="lucky_number")  //CECI EST DU CODE !!!! C'est une annotation PHP
      *
-     * Au final, cela donne l'url suivante: http://localhost:8080/lucky/number/
+     * Au final, cela donne l'url suivante: http://localhost:8000/lucky/number/
      *
      */
     public function numberAction()
@@ -65,7 +65,7 @@ Ajoutez à présent le template associé : `/app/Resources/views/default/number.
 {% endblock %}
 ```
 
-Accédez maintenant à l'URL [http://localhost:8080/lucky/number/](http://localhost:8080/lucky/number)
+Accédez maintenant à l'URL [http://localhost:8000/lucky/number/](http://localhost:8080/lucky/number)
 
 
 Maintenant, ajoutez un paramètre à l'url qui correspond au nombre max :
@@ -77,7 +77,7 @@ Maintenant, ajoutez un paramètre à l'url qui correspond au nombre max :
     /**
      * @Route("/lucky/number/{max}", name="lucky_number")  // Ceci est toujours du code !
      *
-     * exemple d'url: http://localhost:8080/lucky/number/100
+     * exemple d'url: http://localhost:8000/lucky/number/100
      *
      */
     public function numberAction($max)

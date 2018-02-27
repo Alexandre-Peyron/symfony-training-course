@@ -11,7 +11,7 @@ Partons sur l'exemple d'un article auquel nous ajoutons une cover.
 > D'une part nous allons avoir une propriété cover, une chaine de caractère enregistrée en BDD, 
 qui correspond au nom de l'image avec son extension. Ex: 32498732938.jpg
 
-> D'autre part, une propriété file, non enregistré en base qui correspondra à notre objet uploadé.
+> D'autre part, une propriété file, non enregistrée en base qui correspondra à notre objet uploadé.
 
 
 ```php
