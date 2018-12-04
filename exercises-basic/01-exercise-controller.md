@@ -16,21 +16,39 @@ Plus tard, on verra que ce n'est pas toujours le cas mais pour la compréhension
 
 ### Controller et route de base
 
-> Dans le cadre de l'exercice, vous pouvez travailler directement dans **src/AppBundle** et dans la class de controller déjà créée **Controller/DefaultController**
+> Nous travaillons dans le dossier **src/**. C'est ici que se trouve votre code.
 
-Créez une première action de controller simple :
+Effectuez la commande suivante : 
+
+```bash
+php bin/console make:controller
+```
+
+Répondez à la question demandée, et nommez ainsi votre controller (par exemple : DefaultController).
+
+Validez.
+
+Deux nouveaux fichiers viennent d'être créé `src/controller/DefaultController` et `templates/default/index.html.twig`
+
+Le controller possède déjà une route :
+
+```
+/**
+ * @Route("/default", name="default")
+ */
+public function index()
+{
+    return $this->render('default/index.html.twig', [
+        'controller_name' => 'DefaultController',
+    ]);
+}
+```
+
+
+Créez une première action de controller simple en ajoutant à la suite :
 
 ```php
-namespace AppBundle\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\HttpFoundation\Response;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-
-class DefaultController extends Controller
-{
-    // [...]
-    
     /**
      * @Route("/lucky/number/", name="lucky_number")  //CECI EST DU CODE !!!! C'est une annotation PHP
      *
@@ -49,13 +67,11 @@ class DefaultController extends Controller
             'number' => $number
        ]);
     }
-    
-    // [...]
-}
+   
 ```
 Nous avons créé ici une route `@Route(/"lucky/number")` et une action de controller `numberAction()`.
 
-Ajoutez à présent le template associé : `/app/Resources/views/default/number.html.twig`
+Ajoutez à présent le template associé : `/templates/default/number.html.twig`
 
 ```twig
 {% extends 'base.html.twig' %}
