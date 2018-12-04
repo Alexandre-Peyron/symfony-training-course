@@ -46,7 +46,7 @@ if ($form->isSubmitted() && $form->isValid()) {
 > Une commande permet de générer une class de formulaire depuis une entité, dans MyBundle/Form/MyEntityType.php
 >
 > ```bash
-> php bin/console doctrine:generate:form MyBundle:MyEntity
+> php bin/console make:form
 > ```
 
 
