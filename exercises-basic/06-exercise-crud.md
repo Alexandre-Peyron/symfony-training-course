@@ -12,7 +12,7 @@ Les options à choisir seront:
  - le prefix peut porter le nom de l'entité. Ex: /article
 
 ```bash
-php bin/console generate:doctrine:crud MyBundle:MyEntity
+php bin/console make:crud
 ```
 
 Voilà, c'est fini.
