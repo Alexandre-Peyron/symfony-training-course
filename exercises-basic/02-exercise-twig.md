@@ -7,7 +7,7 @@ Le but de l'exercice est de comprendre les bases de twig: héritage, inclusion, 
 
 #### Les bases
 
-- Créez dans `app/Resources/views` un nouveau template `layout.html.twig` qui hérite de `base.html.twig`
+- Créez dans `templates` un nouveau template `layout.html.twig` qui hérite de `base.html.twig`
 
 ```twig
 {% extends 'base.html.twig' %}
@@ -17,7 +17,7 @@ Le but de l'exercice est de comprendre les bases de twig: héritage, inclusion, 
 {% endblock body %}
 ```
 
-- Toujours dans `app/Resources/views` créer 3 fichiers: `header.html.twig`, `menu.html.twig`, `footer.html.twig`.
+- Toujours dans `templates` créer 3 fichiers: `header.html.twig`, `menu.html.twig`, `footer.html.twig`.
 - Ajoutez du contenu dans chaque template, exemple :
 
 ```twig
@@ -41,13 +41,23 @@ Le but de l'exercice est de comprendre les bases de twig: héritage, inclusion, 
  
  
 
-#### Intégration
+#### Intégration et WebPack-Encore
 
-- Créez 2 fichiers dans `web/assets/`, `main.css` et `main.js`
-- Dans le block **stylesheets** de `base.html.twig`, appelez le fichier css via la fonction [asset](http://symfony.com/doc/3.4/best_practices/web-assets.html)
-- Positionnez votre header en haut de la page sur toute la largeur, le menu dans une colonne sur la gauche, votre contenu de page à droite et pour finir le footer en base sur toute la largeur
-- Ajouter un fichier **js** dans `base.html.twig` via la fonction asset
-- Si vous le souhaitez, ajoutez un framework CSS (bootstrap, foundation...)
+Créez 2 fichiers dans `/assets/`, `main.css` et `main.js`
+
+Il faut à présent configurer la gestion des assets dans Symfony avec le bundle [Webpack-Encore](https://symfony.com/doc/current/frontend.html)
+
+Dans le block **stylesheets** de `base.html.twig`, appelez le fichier css via les [méthodes du bundle](https://symfony.com/doc/current/frontend/encore/simple-example.html)
+
+Positionnez :
+ - votre header en haut de la page sur toute la largeur
+ - le menu dans une colonne sur la gauche
+ - votre contenu de page à droite
+ - pour finir le footer en base sur toute la largeur
+ 
+Ajouter un fichier **js** dans `base.html.twig`.
+
+Si vous le souhaitez, ajoutez un framework CSS (bootstrap, foundation...)
 
 
 
