@@ -51,6 +51,9 @@ Utilisez la commande suivante :
 ```bash
 composer create-project symfony/website-skeleton my-project
 ```
+La commande vous indique tous les bundles qu'elle vient d'installer. 
+On se rend compte, que le framework Symfony est en fait une multitude d'outils réunis ensemble. 
+Chacun des bundles peut être utilisé de manière indépendante dans vos projets.
 
 Via la console, placez vous maintenant dans le dossier nouvellement créé.
 
