@@ -49,10 +49,6 @@ Puis se rendre sur [http://localhost:8000/](http://localhost:8000/)
 Se rendre sur [http://localhost:8000/config.php](http://localhost:8000/config.php) pour vérifier si l'environnement local est bien configuré
 
 
-### Création d'un nouveau bundle
-
-`php bin/console generate:bundle`
-
 ### Création d'une nouvelle page
 
 - Créer une nouvelle route en ajoutant une action à notre `controller`
@@ -101,19 +97,19 @@ class DefaultController extends Controller
 ### Utilisation de la base de données
 
 - Créer une nouvelle base de données dans son environnement local
-- Mettre à jour le  fichier app/config/parameters.yml
+- Mettre à jour le  fichier `.env`
 
 
 ### Création d'une nouvelle entité
 
-`php bin/console doctrine:generate:entity`
+`php bin/console make:entity`
 
 > Une entité correspond à une table dans votre base de données.
 
 Après création, si vous ajoutez des propriétés à votre entité, par exemple `$is_enabled`,
 la commande pour mettre à jour les `Getter` et `Setter` est :
 
-`php bin/console doctrine:generate:entities MyBundle:MyEntity`
+`php bin/console make:entity --regenerate Namespace/Entity`
 
 ### Pour mettre à jour la base de données
 
@@ -165,7 +161,6 @@ class ArticleController extends Controller
         ));
     }
     
-    
     /**
      * Afficher un article
      *
@@ -179,7 +174,6 @@ class ArticleController extends Controller
             'article' => $article,
         ));
     }
-    
     
     /**
      * Créer un nouvel article
@@ -225,7 +219,6 @@ class ArticleController extends Controller
         ));
     }
     
-    
     /**
      * Afficher un formulaire pour modifier un article
      *
@@ -262,8 +255,6 @@ class ArticleController extends Controller
 ## Pour aller plus loin
 
 Votre principale bible reste est restera [la documentation de Symfony](http://symfony.com/doc/current/index.html)
-
-Très bon cours sur [Open ClassRooms](https://openclassrooms.com/courses/developpez-votre-site-web-avec-le-framework-symfony)
 
 
 

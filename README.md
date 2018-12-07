@@ -34,4 +34,28 @@ et en développement web. Le cours s'étend sur 4 à 5 jours pour les bases, et 
 - [DUT MMI au Puy en Velay](http://mmi-lepuy.fr/)
 - Licence Pro Multimédia au Puy en Velay
 - [Simplon Lyon](http://lyon.simplon.co/)
+- [House of Code Lyon](http://www.house-of-code.fr/)
+
+
+### Bibliographie
+
+Liste non exaustive de livres ou ressources autour de Symfony et du développement. 
+
+## Global
+EN - [Awesome PHP](https://github.com/ziadoz/awesome-php)
+EN - [Clean Code](https://www.amazon.fr/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882/)
+
+## Symfony
+EN - [La doc SF](https://symfony.com/doc/current/index.html)
+EN - [Awesome Symfony](https://github.com/sitepoint-editors/awesome-symfony#readme)
+EN - [Awesome Symfony Learning](https://github.com/pehapkari/awesome-symfony-education#readme)
+FR - Très bon cours sur [Open ClassRooms](https://openclassrooms.com/courses/developpez-votre-site-web-avec-le-framework-symfony)
+
+## HTTP
+EN - [RestFull API et méthodes HTTP](https://restfulapi.net/http-methods/)
+EN - La doc Symfony sur [les fondamentaux du HTTP](http://symfony.com/doc/current/introduction/http_fundamentals.html)
+
+## PHP Design Pattern
+EN - [Liste de design pattern en PHP](https://github.com/domnikl/DesignPatternsPHP)
+
 

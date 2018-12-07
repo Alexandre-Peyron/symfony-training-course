@@ -9,7 +9,7 @@ Vous pouvez créer un nouveau Bundle `AdminMonProjectThemeUnTrucBundle` qui va c
 Utilisez l'outil de création d'entités
 
 ```bash
-php bin/console doctrine:generate:entity
+php bin/console make:entity --regenerate Namespace/Entity
 
 ```
 Créez ainsi vos entités `Article/Product`, `Category`, `Tag`...
