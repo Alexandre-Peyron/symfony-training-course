@@ -41,7 +41,7 @@ dans le cas contraire, il faut procéder à quelques manipulations
 
 Ouvrez un terminal/console et placez vous dans le futur dossier parent de votre projet.
 
-> Dans le cas où l'infrasture réseau ne vous permettrait pas d'effectuer les actions suivantes, il un [.zip](../symfony%20download/) avec une version de Symfony 3.4
+> Dans le cas où l'infrasture réseau ne vous permettrait pas d'effectuer les actions suivantes, il un [.zip](../symfony%20download/) avec une version de Symfony 4.2
 
 Suivez ensuite les étapes de la documentation, [*Creating Symfony Applications*](https://symfony.com/doc/current/setup.html), pour créer une nouvelle application Symfony. 
 Nommez la comme vous le souhaitez (symfony-discovery par exemple). Nous travaillerons avec la dernière version stable.
@@ -49,11 +49,19 @@ Nommez la comme vous le souhaitez (symfony-discovery par exemple). Nous travaill
 Utilisez la commande suivante :
 
 ```bash
+composer create-project symfony/skeleton my-project
+```
+Il s'agit seulement du Framework en lui-même sans l'ensemble de ses composants.
+
+Ce n'est pas le plus pratique pour notre projet, mais c'est mieux pour la compréhension car on va devoir installer chaque composant du framework quand on en aura besoin.
+On réalisera à ce moment là que le framework Symfony est en fait une multitude d'outils réunis ensemble. 
+Chacun des bundles pourrait être utilisé de manière indépendante dans vos projets, même des projets sans Symfony.
+
+Si nous voulions installer une version de Symfony "Ready to start", on utiliserait cette commande :
+```bash
 composer create-project symfony/website-skeleton my-project
 ```
 La commande vous indique tous les bundles qu'elle vient d'installer. 
-On se rend compte, que le framework Symfony est en fait une multitude d'outils réunis ensemble. 
-Chacun des bundles peut être utilisé de manière indépendante dans vos projets.
 
 Via la console, placez vous maintenant dans le dossier nouvellement créé.
 
