@@ -7,6 +7,3 @@
 [submodule "projects-sample/symfony-training-course-project-blog"]
 	path = projects-sample/symfony-training-course-project-blog
 	url = https://github.com/Alexandre-Peyron/symfony-training-course-project-blog.git
-[submodule "projects-sample/demo"]
-	path = projects-sample/demo
-	url = https://github.com/symfony/demo.git
