@@ -16,7 +16,6 @@ et en développement web. Le cours s'étend sur 4 à 5 jours pour les bases, et 
     - [Crud](./exercises-basic/06-exercise-crud.md)     
     - [Entity Relation](./exercises-basic/07-exercise-entity-relations.md)     
   - *Exercises-advanced* : Exercices spécifiques avancés (FosUserBundle, upload, EventListener, Command)
-    - [FosUser](./exercises-advanced/01-fos-user.md)
     - [Image Upload](./exercises-advanced/02-image-upload.md)
     - [Event Disptacher](./exercises-advanced/03-event-dispatcher.md)
     - [Command](./exercises-advanced/04-command.md)
