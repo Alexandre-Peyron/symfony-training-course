@@ -62,7 +62,7 @@ Si jamais elle ne se trouve pas dans le même dossier/bundle, il faut mettre le 
 
 > **mappedBy** correspond à la variable utilisée dans l'entité cible
  
-- Mettre à jour les `getter` et `setter` avec `php bin/console doctrine:generate:entities MyBundle:MyEntity`
+- Mettre à jour les `getter` et `setter` avec `php bin/console make:entity --regenerate` avec en paramètre le namespace de l'entity `App\Entity\MyEntity`
 - mettre à jour la base de données `php bin/console doctrine:schema:update --force`
 
 ### OneToOne
@@ -72,7 +72,7 @@ C'est un cas relativement rare, mais le principal usage se fait dans les relatio
 Exemple: un article parent d'un autre. La table fait référence à elle même, ça s'appelle du `self-referencing`
 
 - Créez une relation de self-referencing sur l'une de vos entités
-- Mettre à jour les `getter` et `setter` avec `php bin/console doctrine:generate:entities MyBundle:MyEntity`
+- Mettre à jour les `getter` et `setter` avec `php bin/console make:entity --regenerate` (`App\Entity\MyEntity`)
 - mettre à jour la base de données `php bin/console doctrine:schema:update --force`
 
 ```php
@@ -133,7 +133,7 @@ Maintenant créez la relation entre les 2 entités.
 ```
 
 
-- Mettre à jour les `getter` et `setter` avec `php bin/console doctrine:generate:entities MyBundle:MyEntity`
+- Mettre à jour les `getter` et `setter` avec `php bin/console make:entity --regenerate` (`App\Entity\MyEntity`)
 - mettre à jour la base de données `php bin/console doctrine:schema:update --dump-sql --force`
 
 > En regardant votre BDD, vous pouvez vous rendre contre que la table intermédiaire a été créé automatiquement
