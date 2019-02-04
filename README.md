@@ -28,14 +28,6 @@ et en développement web. Le cours s'étend sur 4 à 5 jours pour les bases, et 
   - *Presentation* : Slide de présentation du framework
   - *Symfony Download* : .zip avec un projet symfony de base, en cas de problème(s) réseau(x)
   
-
-### Liste des écoles dans lesquelles j'interviens :
-- [DUT MMI au Puy en Velay](http://mmi-lepuy.fr/)
-- Licence Pro Multimédia au Puy en Velay
-- [Simplon Lyon](http://lyon.simplon.co/)
-- [House of Code Lyon](http://www.house-of-code.fr/)
-
-
 ### Bibliographie
 
 Liste non exaustive de livres ou ressources autour de Symfony et du développement. 
@@ -56,5 +48,14 @@ Liste non exaustive de livres ou ressources autour de Symfony et du développeme
 
 ## PHP Design Pattern
 - EN [Liste de design pattern en PHP](https://github.com/domnikl/DesignPatternsPHP)
+
+
+### Liste des écoles dans lesquelles j'interviens :
+- [DUT MMI au Puy en Velay](http://mmi-lepuy.fr/)
+- Licence Pro Multimédia au Puy en Velay
+- [Simplon Lyon](http://lyon.simplon.co/)
+- [House of Code Lyon](http://www.house-of-code.fr/)
+
+
 
 
