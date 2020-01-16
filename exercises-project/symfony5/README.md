@@ -34,6 +34,7 @@ Ajoutez une relation One-to-one à `Book` permettant d'avoir les tomes suivant e
 Dans l'ordre : 
 - mettez à jour la relation
 - modifiez le formulaire
+- le select du formulaire ne doit pas contenir l'entité elle-même
 - ajoutez les fixtures correspondantes
 
 
