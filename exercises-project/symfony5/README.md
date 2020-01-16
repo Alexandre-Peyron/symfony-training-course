@@ -35,3 +35,14 @@ Dans l'ordre :
 - mettez à jour la relation
 - modifiez le formulaire
 - ajoutez les fixtures correspondantes
+
+
+### Updated At
+
+La valeur updated_at de Symfony n'est pas mise à jour.
+
+Utilisez les [Doctrine Event](https://symfony.com/doc/current/doctrine/events.html) Symfony pour mettre à jour la valeur.
+
+L'évènement en question est le "Pre Update".
+
+Créer une class `App\EventListener\BookEventListener qui est un EntityListener. Déclarer la suscription au bon évènement et créez la méthode permettant de mettre à jour le updated_at.
