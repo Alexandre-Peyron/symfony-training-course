@@ -22,7 +22,16 @@ Notre projet de base est vide et c'est plutôt rébarbatif de remplir une BDD à
 
 Utilisez l'extension [Doctrine Fixture](https://symfony.com/doc/master/bundles/DoctrineFixturesBundle/index.html) pour ajouter des données de tests.
 
-Elles doivent contenir :
+Elles doivent contenir, dans des fichiers séparés :
 - Des tags
 - Des category
 - Des book en relation avec Tag et Category 
+
+### Relation One-to-One Self-referencing
+
+Ajoutez une relation One-to-one à `Book` permettant d'avoir les tomes suivant et précédent dans une série de livres.
+
+Dans l'ordre : 
+- mettez à jour la relation
+- modifiez le formulaire
+- ajoutez les fixtures correspondantes
