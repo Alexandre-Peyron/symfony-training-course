@@ -65,7 +65,9 @@ Deuxièmement, la sérialisation. En l'état Symfony ne sait pas transformer vot
 
 > La sérialization est un processus complexe, je vous invite à regarder les liens suivants pour approfondir le sujet
 > [https://www.novaway.fr/blog/tech/comment-utiliser-le-serializer-symfony](https://www.novaway.fr/blog/tech/comment-utiliser-le-serializer-symfony)
+>
 > [https://afup.org/talks/2545-maitriser-le-composant-serializer-de-symfony](https://afup.org/talks/2545-maitriser-le-composant-serializer-de-symfony)
+>
 > [https://openclassrooms.com/fr/courses/4087036-construisez-une-api-rest-avec-symfony/4302521-la-serialisation-avec-le-composant-serializer-de-symfony](https://openclassrooms.com/fr/courses/4087036-construisez-une-api-rest-avec-symfony/4302521-la-serialisation-avec-le-composant-serializer-de-symfony)
 
 
