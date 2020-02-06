@@ -47,3 +47,32 @@ Utilisez les [Doctrine Event](https://symfony.com/doc/current/doctrine/events.ht
 L'évènement en question est le "Pre Update".
 
 Créer une class `App\EventListener\BookEventListener qui est un EntityListener. Déclarer la suscription au bon évènement et créez la méthode permettant de mettre à jour le updated_at.
+
+
+### API Rest Simple
+
+L'objectif ici est de créer un controller d'API pour l'entité Book.
+
+#### GET /api/book/{id}
+
+Vous allez commencer par la route qui permet d'afficher un livre.
+
+Le fonctionnement est quasi le même que pour une route normale mais 2 choses diffèrent
+
+Premièrement, la réponse. Symfony fournit une méthode permettant de renvoyer du JSON `new JsonResponse(...)`.
+
+Deuxièmement, la sérialisation. En l'état Symfony ne sait pas transformer votre objet en JSON. Il faut utiliser pour celà le composant `serializer` de Symfony : [https://symfony.com/doc/current/serializer.html](https://symfony.com/doc/current/serializer.html)
+
+> La sérialization est un processus complexe, je vous invite à regarder les liens suivants pour approfondir le sujet
+> [https://www.novaway.fr/blog/tech/comment-utiliser-le-serializer-symfony](https://www.novaway.fr/blog/tech/comment-utiliser-le-serializer-symfony)
+> [https://afup.org/talks/2545-maitriser-le-composant-serializer-de-symfony](https://afup.org/talks/2545-maitriser-le-composant-serializer-de-symfony)
+> [https://openclassrooms.com/fr/courses/4087036-construisez-une-api-rest-avec-symfony/4302521-la-serialisation-avec-le-composant-serializer-de-symfony](https://openclassrooms.com/fr/courses/4087036-construisez-une-api-rest-avec-symfony/4302521-la-serialisation-avec-le-composant-serializer-de-symfony)
+
+
+#### GET /api/book
+
+Répétez ce précessus pour afficher une liste de livre.
+
+
+
+
