@@ -53,6 +53,10 @@ Créer une class `App\EventListener\BookEventListener qui est un EntityListener.
 
 L'objectif ici est de créer un controller d'API pour l'entité Book.
 
+Pour ce travail, je vous conseille l'utilisation de [Postman](https://www.postman.com/). 
+Un outil pour la création/gestion des APIs.
+Car pour tous les appels en GET, c'est faisable par navigateur mais les POST/PATCH/PUT/DELETE, ce n'est pas possible. 
+
 #### GET /api/book/{id}
 
 Vous allez commencer par la route qui permet d'afficher un livre.
@@ -75,6 +79,74 @@ Deuxièmement, la sérialisation. En l'état Symfony ne sait pas transformer vot
 
 Répétez ce précessus pour afficher une liste de livre.
 
+
+#### POST /api/book
+
+L'enregistrement d'un nouveau Book.
+
+Pour cela, il faut :
+- créer une action de controller qui n'accepte que la méthode POST
+- créer un class de formulaire qui va nous servir à valider les données envoyer
+- si erreur, récupérer les messages d'erreur généré par la class de formulaire
+- si ok, enregistrer les données et renvoyer le code HTTP 201 CREATED
+
+Concernant le formulaire, c'est pas un usage qu'on a l'habitude de voir mais cela reste très simple.
+
+Voilà le code d'une action de controller `new` classique :
+
+```php
+$form = $this->createForm(BookType::class, $book);
+$form->handleRequest($request);
+
+if ($form->isSubmitted() && $form->isValid()) {
+...
+}
+```
+
+Celui d'un `new` d'api :
+
+```php
+$form = $this->createForm(BookType::class, $book);
+
+$form->submit($request->request->all());
+
+if ($form->isValid()) {
+
+}
+```
+
+Comme il n'y a pas de soumission réelle de formulaire, pas de handleRequest.
+On soumet nous même le formulaire avec les données présentes dans $request.
+
+Ensuite, il faut juste tester si elles sont valides.
+
+Concernant les erreurs du formulaire, on les récupère ainsi : 
+
+```php
+$form->getErrors();
+```
+
+Pour les code HTTP, Symfony fournit des constantes de class pour aider :
+
+```php
+
+use Symfony\Component\HttpFoundation\Response;
+
+Response::HTTP_CREATED;
+
+```
+
+A présent, faites en sorte que cette action de controller fonctionne pour la soumission des formats suivant : 
+- DateTime  (published_at)
+- String (title)
+- Boolean (is_enabled)
+
+
+#### PUT/PATCH /api/book/{id}
+
+Répéter le processus précédent pour éditer un livre.
+
+La nuance se trouve ici dans le PUT/PATCH. Je laisse trouver la différence entre ces 2 fonctionnements.
 
 
 
