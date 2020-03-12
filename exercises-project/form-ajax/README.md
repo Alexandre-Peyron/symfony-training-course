@@ -10,9 +10,11 @@ Pour cela, je vous fourni un template déjà intégré sur lequel il faut se bas
 
 Etape par étape, il faut : 
 
-- installer un nouveau projet Symfony.
+- installer un nouveau projet Symfony (si vous ne pouvez sur votre machine, voici le lien d'un [Symfony avec vendor](../../symfony%20download/symfony5.zip)).
 
 - récupérer le template et l'intégrer dans votre projet symfony (controller et view)
+
+> Il n'y a qu'une seule page, la page d'accueil
 
 > Pour les assets, pas besoin d'utiliser Webpack ou Gulp, vous pouvez mettre les fichiers css et js directement dans public.
 
@@ -48,7 +50,7 @@ A présent, il faut :
 
 - bloquer la validation classique du formulaire, via JavaScript (petite piste : `onSubmit` et `event.preventDefault`)
 
-- en JS, récupérer les données du formulaire (...`serialize...) et les mettres dans une variable.
+- en JS, récupérer les données du formulaire (...`serialize`...) et les mettres dans une variable.
 
 - en JS, soumettre les données du formulaire sur une action de controller spécifique.
 
