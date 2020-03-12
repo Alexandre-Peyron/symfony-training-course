@@ -6,6 +6,9 @@ Pour cela, je vous fourni un template déjà intégré sur lequel il faut se bas
 
 > un code soigné et parfaitement indenté sera grandement apprécié.
 
+Le projet est à mettre sur github.
+Envoyez moi ensuite le lien par email, avec nom/prénom et jusqu'où vous êtes arrivés.
+
 ### Première partie
 
 Etape par étape, il faut : 
