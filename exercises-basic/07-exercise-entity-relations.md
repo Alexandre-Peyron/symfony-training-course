@@ -86,7 +86,10 @@ Exemple: un article parent d'un autre. La table fait référence à elle même, 
 ### ManyToMany
 
 La relation ManyToMany est la plus complexe. Dans notre exemple, on peut créer une nouvelle
-entité `Tag`. Un article peu avoir plusieurs tags, et un tag plusieurs articles.
+entité `Tag` (avec name et description). 
+
+
+Un article peu avoir plusieurs tags, et un tag plusieurs articles.
 
 Maintenant créez la relation entre les 2 entités.
 

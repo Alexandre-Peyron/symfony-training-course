@@ -5,7 +5,7 @@ Première chose à faire, comme toujours, ouvrir la [documentation](http://symfo
 Le but de l'exercice est de créer et utiliser les formulaires dans Symfony.
 
 
-### Insert
+### Action Insert
 
 - si ce n'est pas le cas, créez une entité avec 5 types de champs différents
 - ajoutez une action de controller avec une route du genre `myentity/new`
@@ -50,7 +50,7 @@ if ($form->isSubmitted() && $form->isValid()) {
 > ```
 
 
-### Update
+### Action Update
 
 - Créer une classe de formulaire avec la commande indiquée ci-dessus
 - mettre à jour le controller pour utiliser la classe et ne plus créer directement le form dans le controller
@@ -61,7 +61,7 @@ if ($form->isSubmitted() && $form->isValid()) {
 - mettre à jour l'entité en base après soumission
 
 
-### Delete
+### Action Delete
 
 - ajouter cette fonction, sans route, dans votre controller
 

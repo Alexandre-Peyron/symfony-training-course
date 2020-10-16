@@ -1,15 +1,18 @@
 # CRUD
 
-Première chose à faire, comme toujours, ouvrir la [documentation](http://symfony.com/doc/current/bundles/SensioGeneratorBundle/commands/generate_doctrine_crud.html) !
+Première chose à faire, comme toujours, ouvrir la [documentation](https://symfony.com/blog/new-and-improved-generators-for-makerbundle) !
 
 Le but ici est de générer les actions de base d'affichage et d'édition d'une entité.
 
-Une commande permet de faire ceci. 
+Créez une nouvelle entity : 
+- `Category`
+    - id int
+    - name String
+    - description Text
+    - enabled Boolean
+    - created_at Datetime
 
-Les options à choisir seront:
- - "annotation" pour la config
- - si on désire générer les actions d'écriture (write) : yes.
- - le prefix peut porter le nom de l'entité. Ex: /article
+Utilisez la commande suivante :   
 
 ```bash
 php bin/console make:crud
