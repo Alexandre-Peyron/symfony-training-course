@@ -10,7 +10,7 @@ Le but de l'exercice est de comprendre le fonctionnement de doctrine, des entit�
 
 ### Une entité
 
-> Vous pouvez travailler directement dans AppBundle, cette fois encore.
+> Vous pouvez travailler directement dans `src`, cette fois encore.
 
 La première chose à faire est de mettre à jour le fichier `.env` en fonction de votre environnement de développement. Notamment `DATABASE_URL=mysql://db_user:db_password@127.0.0.1:3306/db_name`.
 Ensuite créez une base de données dans votre environnement local, soit manuellement, soit via la ligne de commande:
